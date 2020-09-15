@@ -1,63 +1,147 @@
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-body {
-	color: #333;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-a {
-	color: rgb(0,100,200);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(0,80,160);
-}
-
-label {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
+/* --- Box sizing --- */
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
 }
 
-input:disabled {
-	color: #ccc;
+/* --- Grid --- */
+
+
+
+/* --- Typefaces --- */
+
+@font-face {
+    src: url('assets/fonts/Whyte-Regular.woff2') format("woff2"),
+         url('assets/fonts/Whyte-Regular.woff') format("woff");
+    font-family: 'Whyte';
+    font-style: normal;
+}
+@font-face {
+    src: url('assets/fonts/WhyteInktrap-Regular.woff2') format("woff2"),
+         url('assets/fonts/WhyteInktrap-Regular.woff') format("woff");
+    font-family: 'Whyte Inktrap';
+    font-style: normal;
 }
 
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
+/* --- Variables --- */
+
+:root{
+	--black: #0C0C18;
+	--off-black:#1E2132;
+	--white: #fff;
+	--off-white: #F2F2F2;
+
+	--blue: #414BFF;
+	--yellow: #FF9C2E;
+	--red: #FF503C;
+	--pink: #EE3E9C;
+	--green: #0FA95B;
+	--purple: #823CD7;
+
+	--whyte: 'Whyte';
+	--whyteInk: 'Whyte Inktrap';
+	--space: 'Space Grotesk';
 }
 
-button:disabled {
-	color: #999;
+/* --- General --- */
+
+body{
+	background-color: var(--black);
 }
 
-button:not(:disabled):active {
-	background-color: #ddd;
+/* --- Typography --- */
+
+h1{
+	font-family: var(--whyte);
+	font-size: 80px;
+	line-height: 1;
+}
+h2{
+	font-family: var(--whyte);
+	font-size: 12px;
+	line-height: 1;
+}
+p{
+	font-family: var(--space);
+	font-size: 16px;
+	line-height: 24px;
+}
+p.large{
+	font-family: var(--space);
+	font-size: 18px;
+	line-height: 24px;
+}
+button{
+	font-family: var(--whyte);
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	line-height: 1;
+	padding: 16px 32px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	background-color: rgba(0,0,0,0);
+	color: var(--white);
+	outline:none;
 }
 
-button:focus {
-	border-color: #666;
-}
+
+
+

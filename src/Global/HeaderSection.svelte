@@ -13,6 +13,12 @@
         </div>
     </div>
 
+    <div class="bg-tex">
+        <img class="glass-01" src="assets/vector/glass-dark.svg" alt="">
+        <!-- <img class="glass-02" src="assets/vector/glass-dark.svg" alt=""> -->
+        <img class="glass-03" src="assets/vector/glass-dark.svg" alt="">
+    </div>
+
 </section>
 
 
@@ -26,8 +32,10 @@
         /* background-color: var(--red); */
     }
     .text-wrapper{
+        position: relative;
         width: 100%;
         height: 100%;
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,6 +49,29 @@
 
     h1,p{
         padding-bottom: 40px;
+    }
+
+    .bg-tex{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+
+    .glass-01{
+        margin-left: 20%;
+        transform: translateY(10%);
+        width: 28vw;
+        max-width: 100%;
+    }
+
+    .glass-03{
+        transform: translateY(-60%);
+        width: 28vmax;
     }
 
 </style>
